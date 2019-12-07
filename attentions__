@@ -1,0 +1,60 @@
+1) 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-first-pod
+spec:
+  containers:
+    - name: my-first-container
+      image: nginx
+
+
+2) Events первое место на которое при котором надо смотреть если что-то идет не так
+
+3) автодополнение для кубера-- в баш https://kubernetes.io/docs/tasks/tools/install-kubectl/ 
+   этот же подход можно применить и для дворва
+
+
+
+
+
+
+
+
+
+
+ 1577  sudo snap install kubectl --classic
+ 1578  kubectl version
+ 1584  sudo snap remove kubectl 
+ 1679  kubectl get pods --all-namespaces
+ 1681  kubectl delete service,deployment hello-node
+ 1688  kubectl get deployments
+ 1941  kubectl
+ 1962  kubectl get nodes
+ 1965  kubectl get nodes
+ 1971  kubectl get nodes
+ 1979  kubectl
+ 1980  kubectl get nodes
+ 1981  kubectl get nodes -o wide
+ 1982  kubectl describe nodes
+ 1983  kubectl describe node gke-k8s-sandbox-cluster--default-pool-39667ee9-0w1m
+ 1984  kubectl get podes
+ 1985  kubectl get pods
+ 1986  kubectl get namespace
+ 1987  kubectl get pods --namespace default
+ 1988  kubectl get pods --namespace kube-system
+ 1989  kubectl get pods --namespace kube-system -o wide
+ 1990  kubectl get nodes
+ 1991  kubectl get pods --namespace default
+ 1992  kubectl get pods --namespace kube-system
+ 1993  kubectl explain 
+ 1994  kubectl explain nodea
+ 1995  kubectl explain nodes
+ 1996  kubectl explain pods
+ 2004  echo 'source <(kubectl completion bash)' >>~/.bashrc
+ 2009  kubectl apply -f ./firstpod.yml 
+ 2010  kubectl get pods
+ 2011  kubectl describe pod my-firest-pod
+ 2012  kubectl describe pods my-firest-pod
+ 2013  kubectl describe pod my-first-pod
+
