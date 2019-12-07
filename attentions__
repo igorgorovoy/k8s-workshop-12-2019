@@ -1,3 +1,5 @@
+https://gitter.im/kubectl-training/december?source=orgpage# - чат
+
 1) 
 apiVersion: v1
 kind: Pod
@@ -14,47 +16,55 @@ spec:
 3) автодополнение для кубера-- в баш https://kubernetes.io/docs/tasks/tools/install-kubectl/ 
    этот же подход можно применить и для дворва
 
+   https://blog.heptio.com/kubectl-shell-autocomplete-heptioprotip-48dd023e0bf3
 
 
 
 
 
 
+Команды:
 
-
-
- 1577  sudo snap install kubectl --classic
- 1578  kubectl version
- 1584  sudo snap remove kubectl 
- 1679  kubectl get pods --all-namespaces
- 1681  kubectl delete service,deployment hello-node
- 1688  kubectl get deployments
- 1941  kubectl
- 1962  kubectl get nodes
- 1965  kubectl get nodes
+ 1558  sudo snap install kubectl --classic
+ 1559  kubectl version
+ 1565  sudo snap remove kubectl 
+ 1660  kubectl get pods --all-namespaces
+ 1662  kubectl delete service,deployment hello-node
+ 1669  kubectl get deployments
+ 1922  kubectl
+ 1943  kubectl get nodes
+ 1946  kubectl get nodes
+ 1952  kubectl get nodes
+ 1960  kubectl
+ 1961  kubectl get nodes
+ 1962  kubectl get nodes -o wide
+ 1963  kubectl describe nodes
+ 1964  kubectl describe node gke-k8s-sandbox-cluster--default-pool-39667ee9-0w1m
+ 1965  kubectl get podes
+ 1966  kubectl get pods
+ 1967  kubectl get namespace
+ 1968  kubectl get pods --namespace default
+ 1969  kubectl get pods --namespace kube-system
+ 1970  kubectl get pods --namespace kube-system -o wide
  1971  kubectl get nodes
- 1979  kubectl
- 1980  kubectl get nodes
- 1981  kubectl get nodes -o wide
- 1982  kubectl describe nodes
- 1983  kubectl describe node gke-k8s-sandbox-cluster--default-pool-39667ee9-0w1m
- 1984  kubectl get podes
- 1985  kubectl get pods
- 1986  kubectl get namespace
- 1987  kubectl get pods --namespace default
- 1988  kubectl get pods --namespace kube-system
- 1989  kubectl get pods --namespace kube-system -o wide
- 1990  kubectl get nodes
- 1991  kubectl get pods --namespace default
- 1992  kubectl get pods --namespace kube-system
- 1993  kubectl explain 
- 1994  kubectl explain nodea
- 1995  kubectl explain nodes
- 1996  kubectl explain pods
- 2004  echo 'source <(kubectl completion bash)' >>~/.bashrc
- 2009  kubectl apply -f ./firstpod.yml 
- 2010  kubectl get pods
- 2011  kubectl describe pod my-firest-pod
- 2012  kubectl describe pods my-firest-pod
- 2013  kubectl describe pod my-first-pod
+ 1972  kubectl get pods --namespace default
+ 1973  kubectl get pods --namespace kube-system
+ 1974  kubectl explain 
+ 1975  kubectl explain nodea
+ 1976  kubectl explain nodes
+ 1977  kubectl explain pods
+ 1978  kubectl explain pod.spec
+ 1985  echo 'source <(kubectl completion bash)' >>~/.bashrc
+ 1990  kubectl apply -f ./firstpod.yml 
+ 1991  kubectl get pods
+ 1992  kubectl describe pod my-firest-pod
+ 1993  kubectl describe pods my-firest-pod
+ 1994  kubectl describe pod my-first-pod
+ 1995  kubectl get events
+ 1996  history | grep kubectl
+ 1997  kubectl port-forward  my-first-pod 4444:80
+ 1998  kubectl logs my-first-pod
+ 2001  history | grep kubectl
+
+
 

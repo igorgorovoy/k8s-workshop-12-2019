@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ws-pod
+spec:
+  containers:
+    -
+    - name: my-first-container
+      image: gmile/workshop-app:v14
+      volumeMounts:
+      - name: my-data
+        mountPath: "/my/path"
+  volumes:
+    - name: my-data
+      persistentVolumeClaim:
+        claimName: pvc-for-our-tests

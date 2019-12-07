@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-for-our-tests-v2
+  name: pvc-for-our-tests
 spec:
   resources:
     requests:
