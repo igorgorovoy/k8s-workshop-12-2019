@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
   name: my-app
 spec:
@@ -19,4 +19,8 @@ spec:
           env:
             - name: DATABASE_URL
               value: postgres://postgres@10.60.1.14:5432/my-test-db
-
+          resources:
+            requests:
+              cpu: 1m
+            limits:
+              cpu: 50m
