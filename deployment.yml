@@ -13,12 +13,29 @@ spec:
       labels:
         my_app: hello-world
     spec:
+      volumes:
+        - name: my-volume-with-config-file
+          configMap:
+            name: my-super-config
+            items:
+              - key: important-file.txt
+                path: important-file.txt
       containers:
         - name: api
+          volumeMounts:
+            - name: my-volume-with-config-file
+              mountPath: /dir-with-my-configs
           image: gmile/workshop-app:v14
           env:
             - name: DATABASE_URL
               value: postgres://postgres@10.60.1.14:5432/my-test-db
+            - name: CONFIG_MAP_PATH
+              value: /dir-with-my-configs/important-file.txt
+            - name: TESTING_CONFIG_VAR
+              valueFrom:
+                configMapKeyRef:
+                  name: my-super-config
+                  key: my_config_key
           resources:
             requests:
               cpu: 1m

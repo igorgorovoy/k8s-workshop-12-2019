@@ -69,3 +69,60 @@ spec:
 
 
 POD readiness -- через exec можно віполнять кастомніе скрипті для проверки жив ли контейнер
+
+
+
+gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ kubectl get pods
+NAME                      READY   STATUS    RESTARTS   AGE
+debug                     1/1     Running   0          19h
+my-app-69c66744c4-gjm6z   1/1     Running   0          18h
+my-app-69c66744c4-lzzv2   1/1     Running   0          18h
+my-app-69c66744c4-t75mz   1/1     Running   0          18h
+my-app-69c66744c4-w68w7   1/1     Running   0          18h
+my-app-69c66744c4-xwxlb   1/1     Running   0          18h
+my-db-pod                 1/1     Running   0          19h
+gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ history | grep kubectl
+  552  sudo snap install kubectl --classic
+  553  kubectl version
+  559  sudo snap remove kubectl
+  654  kubectl get pods --all-namespaces
+  656  kubectl delete service,deployment hello-node
+  663  kubectl get deployments
+  916  kubectl
+  937  kubectl get nodes
+  940  kubectl get nodes
+  946  kubectl get nodes
+  954  kubectl
+  955  kubectl get nodes
+  956  kubectl get nodes -o wide
+  957  kubectl describe nodes
+  958  kubectl describe node gke-k8s-sandbox-cluster--default-pool-39667ee9-0w1m
+  959  kubectl get podes
+  960  kubectl get pods
+  961  kubectl get namespace
+  962  kubectl get pods --namespace default
+  963  kubectl get pods --namespace kube-system
+  964  kubectl get pods --namespace kube-system -o wide
+  965  kubectl get nodes
+  966  kubectl get pods --namespace default
+  967  kubectl get pods --namespace kube-system
+  968  kubectl explain
+  969  kubectl explain nodea
+  970  kubectl explain nodes
+  971  kubectl explain pods
+  972  kubectl explain pod.spec
+  979  echo 'source <(kubectl completion bash)' >>~/.bashrc
+  984  kubectl apply -f ./firstpod.yml
+  985  kubectl get pods
+  986  kubectl describe pod my-firest-pod
+  987  kubectl describe pods my-firest-pod
+  988  kubectl describe pod my-first-pod
+  989  kubectl get events
+  990  history | grep kubectl
+  991  kubectl port-forward  my-first-pod 4444:80
+  992  kubectl logs my-first-pod
+  995  history | grep kubectl
+  998  kubectl top nodes
+  999  kubectl apply -f ./deployment.yml
+ 1000  kubectl get pods
+ 1001  history | grep kubectl
