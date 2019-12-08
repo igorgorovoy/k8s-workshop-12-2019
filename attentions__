@@ -314,3 +314,27 @@ gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ echo '{"Hello":  "World !!!"}
 
  sudo fluent-gem install fluent-plugin-elasticsearch
  2011  historygorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ docker run --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.4.2
+
+
+curl -X GET 'localhost:9200/fluentd/_search?pretty' - запрос в єластик
+screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty - на маке провалится в докер машину
+docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh -- линукс
+
+
+
+
+
+root@gorovoy-MacBookAir:/var/lib/docker/containers/cf16cf5d160f15360638ae76fd9ac332fc28a46078cbed962e78cd11e53c5692# echo '{"log":"{\"type\": \"server\", \"timestamp\": \"2019-12-08T13:42:26,021+0000\", \"level\": \"INFO\", \"component\": \"o.e.c.m.MetaDataMappingService\", \"cluster.name\": \"docker-cluster\", \"node.name\": \"cf16cf5d160f\", \"cluster.uuid\": \"r7mWATt5SVOmUe1CwGpEFA\", \"node.id\": \"04LwK8_FRI-r4jGgYTdTDQ\",  \"message\": \"[fluentd/LhTDf4AlSr2lFZEmjJjJ0A] update_mapping [_doc]\"  }\n","stream":"stdout","time":"2019-12-08T13:42:26.022408783Z"}' | jq '.log' -r | jq
+{
+  "type": "server",
+  "timestamp": "2019-12-08T13:42:26,021+0000",
+  "level": "INFO",
+  "component": "o.e.c.m.MetaDataMappingService",
+  "cluster.name": "docker-cluster",
+  "node.name": "cf16cf5d160f",
+  "cluster.uuid": "r7mWATt5SVOmUe1CwGpEFA",
+  "node.id": "04LwK8_FRI-r4jGgYTdTDQ",
+  "message": "[fluentd/LhTDf4AlSr2lFZEmjJjJ0A] update_mapping [_doc]"
+}
+
+
