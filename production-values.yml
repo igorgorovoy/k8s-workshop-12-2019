@@ -1,0 +1,3 @@
+replicas: 14
+nodePort: 31002
+image: gmile/workshop-app:v14
