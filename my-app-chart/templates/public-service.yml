@@ -6,7 +6,7 @@ spec:
   type: NodePort
   ports:
     - port: 80
-      nodePort: 31000
+      nodePort: {{ .Values.nodePort }}
       targetPort: 4000
   selector:
     my_app: hello-world

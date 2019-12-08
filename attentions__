@@ -132,5 +132,22 @@ gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ history | grep kubectl
 openssl aes-256-cbc -a -salt -in my-file -out my-file.enc
 openssl aes-256-cbc -d -a -in my-file.enc -out my-file
 
+gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ kubectl create namespace staging
+namespace/staging created
+
+
 -- test run helm
 helm install my-app ./my-app-chart/ --dry-run -n staging
+
+helm install my-app ./my-app-chart/ -n staging --values staging-values.yml
+helm upgrade my-app ./my-app-chart/ -n staging --values staging-values.yml
+helm uninstall my-app -n staging
+
+gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ helm diff upgrade my-app ./my-app-chart/ -n staging --values staging-values.yml
+Error: context deadline exceeded
+context deadline exceeded
+Error: plugin "diff" exited with error
+gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ helm plugin ls
+NAME    VERSION         DESCRIPTION
+diff    3.0.0-rc.7      Preview helm upgrade changes as a diff
+
