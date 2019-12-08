@@ -19,10 +19,6 @@ spec:
    https://blog.heptio.com/kubectl-shell-autocomplete-heptioprotip-48dd023e0bf3
 
 
-
-
-
-
 Команды:
 
  1558  sudo snap install kubectl --classic
@@ -157,3 +153,164 @@ LOGS---
 gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ fluentd -c efk/my-config.conf
 gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ echo '{"Hello":  "World !!!"}' | fluent-cat  some-tag
 
+
+
+08-12-2019
+Команды:
+
+1858  kubectl port-forward app-advanced-pod 4000:4000
+ 1859  kubectl port-forward my-first-pod 4000:4000
+ 1860  kubectl top nodes
+ 1861  kubectl apply -f ./deployment.yml
+ 1862  kubectl get pods
+ 1863  watch kubectl  get pods,pv,pvs,services,rs,deploy
+ 1864  watch kubectl  get pods,pv,pvc,services,rs,deploy
+ 1865  kubectl run -i --tty --rm debug --image=ubuntu --restart=Never -- bash
+ 1866  kubectl run -i --tty --rm debug --image=ubuntu --restart=Never -- bash
+ 1867  ls
+ 1868  cd k8s-workshop-12-2019/
+ 1869  git status
+ 1870  git add ./
+ 1871  git commit -am "start"
+ 1872  git push
+ 1873  nano pv.yml
+ 1874  nano pvc.yml
+ 1875  kubectl apply -f pv.yml
+ 1876  kubectl apply -f pvc.yml
+ 1877  git status
+ 1878  git add ./
+ 1879  git commit -am "pvs + pv"
+ 1880  git push
+ 1881  cat ~/.ssh/id_rsa.pub
+ 1882  git status
+ 1883  pycharm
+ 1884  kubectl get pods
+ 1885  kubectl get pods -o wide
+ 1886  ls
+ 1887  cat debugger
+ 1888  echo 'pod9' > myfile
+ 1889  kubectl cp  myfile my-first-pod:/
+ 1890  kubectl exec  my-first-pod cat /myfile
+ 1891  kubectl exec it
+ 1892  kubectl run -i --tty -restart=Never -- bash
+ 1893  kubectl get pods
+ 1894  kubectl get PersistentVolumeClaim
+ 1895  kubectl get PersistentVolume
+ 1896  kubectl get pv
+ 1897  kubectl get pvc
+ 1898  kubectl get pods,pv,pvc
+ 1899  watch kubectl get pods,pv,pvc
+ 1900  mc
+ 1901  curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get_helm.sh
+ 1902  chmod 700 get_helm.sh
+ 1903  ./get_helm.sh
+ 1904  helm
+ 1905  mc
+ 1906  kubectl apply -f ./deployment.yml
+ 1907  kubectl describe my-app-7bc56dc597-bb2x8
+ 1908  kubectl describe pod my-app-7bc56dc597-bb2x8
+ 1909  ls
+ 1910  helm
+ 1911  sudo snap install helm
+ 1912  helm
+ 1913  helm -v
+ 1914  helm -V
+ 1915  helm -version
+ 1916  helm --version
+ 1917  helm
+ 1918  helm version
+ 1919  helm install my-app ./my-app-chart/ --dry-run
+ 1920  kubectl delete secret my-super-secret
+ 1921  helm install my-app ./my-app-chart/ --dry-run
+ 1922  helm install my-app ./my-app-chart/ --dry-run -n staging
+ 1923  helm install my-app ./my-app-chart/ --dry-run -n staging >> generating_files_after_helm_run
+ 1924  helm install my-app ./my-app-chart/ --dry-run -n staging --values staging-values.yml
+ 1925  helm install my-app ./my-app-chart/ --dry-run -n staging --values staging-values.yml  > generating_files_after_helm_run
+ 1926  ls
+ 1927  kubectl create namespace staging
+ 1928  helm install my-app ./my-app-chart/ -n staging --values staging-values.yml  > generating_files_after_helm_run
+ 1929  helm ls
+ 1930  helm ls -n staging
+ 1931  helm install my-app ./my-app-chart/ -n staging --values staging-values.yml
+ 1932  helm ls -n staging
+ 1933  helm upgrade ./my-app-chart/ -n staging --values staging-values.yml
+ 1934  helm upgrade ./my-app-chart/ --values staging-values.yml
+ 1935  helm uninstall my-app -n staging
+ 1936  helm install my-app ./my-app-chart/ -n staging --values staging-values.yml
+ 1937  helm uninstall my-app -n staging
+ 1938  helm install my-app ./my-app-chart/ -n staging --values staging-values.yml
+ 1939  kubectl get pods
+ 1940  kubectl get pods -n staging
+ 1941  helm upgrade my-app ./my-app-chart/ -n staging --values staging-values.yml
+ 1942  helm ls
+ 1943  helm ls -n staging-values.yml
+ 1944  helm ls -n staging
+ 1945  helm plugin install git@github.com:databus23/helm-diff.git
+ 1946  helm diff upgrade my-app ./my-app-chart/ -n staging --values staging-values.yml
+ 1947  helm plugin ls
+ 1948  helm upgrade my-app ./my-app-chart/ -n staging --values staging-values.yml
+ 1949  helm ls -n staging
+ 1950  helm show -n staging-values.yml
+ 1951  helm show -n staging
+ 1952  helm inspect -n staging
+ 1953  helm install my-app ./my-app-chart -n production --values production-values.yaml
+ 1954  kubectl create namespace production
+ 1955  helm install my-app ./my-app-chart -n production --values production-values.yaml
+ 1956  helm install my-app ./my-app-chart -n production --values ./production-values.yml
+ 1957  helm ls -n production
+ 1958  kubectl get pods  -n production
+ 1959  kubectl get pods -o wide -n production
+ 1960  helm upgrade my-app ./my-app-chart/ -n production  --values ./production-values.yml
+ 1961  kubectl get pods -o wide -n production
+ 1962  history | grep exec
+ 1963  kubectl exec -it my-app-67c56fbdf4-htr4x -- ash
+ 1964  kubectl -n production exec -it my-app-67c56fbdf4-htr4x -- ash
+ 1965  helm upgrade my-app ./my-app-chart/ -n production  --values ./production-values.yml
+ 1966  kubectl get pods -o wide -n production
+ 1967  update
+ 1968  watch kubectl get pods -o wide -n production
+ 1969  pycharm
+ 1970  mc
+ 1971  sudo mv terraform /usr/local/bin/
+ 1972  cd /usr/local/bin/
+ 1973  chmod +x terraform
+ 1974  cd ~
+ 1975  terraform --version
+ 1976  sudo apt install ruby-full
+ 1977  kubectl get nodes
+ 1978  kubectl get nodes -n staging
+ 1979  kubectl get pods -n staging
+ 1980  kubectl get pods
+ 1981  kubectl get pods -n production
+ 1982  helm upgrade my-app ./my-app-chart/ -n production  --values ./production-values.yml
+ 1983  helm uninstall  my-app -n production
+ 1984  kubectl get pods -n production
+ 1985  helm uninstall  my-app -n production
+ 1986  kubectl get pods -n production
+ 1987  kubectl get pods -n staging
+ 1988  gem install fluentd
+ 1989  sudo apt install ruby
+ 1990  gem install fluentd
+ 1991  sudo gem install fluentd
+ 1992  gem list
+ 1993  gem install fluentd
+ 1994  sudo gem install fluentd
+ 1995  lsb_release -a
+ 1996  echo '{"Hello, World !!!"}' | fluent-cat  some-tag
+ 1997  echo '{"Hello":  "World !!!"}' | fluent-cat  some-tag
+ 1998  echo '{"Hello":  "World !!!"}' | fluent-cat  my-service
+ 1999  fluentd -c efk/my-config.conf
+ 2000  watch cat /tmp/fluentd-playground
+ 2001  cat /tmp/fluentd-playground
+ 2002  cd /tmp/
+ 2003  ls
+ 2004  ls /tmp
+ 2005  ls *адгуте* /tmp
+ 2006  ls *fluent* /tmp
+ 2007  ls *fluent*
+ 2008  watch ls *fluent*
+ 2009  mc
+ 2010  ls
+
+ sudo fluent-gem install fluent-plugin-elasticsearch
+ 2011  historygorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ docker run --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.4.2
