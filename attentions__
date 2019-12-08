@@ -151,3 +151,9 @@ gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ helm plugin ls
 NAME    VERSION         DESCRIPTION
 diff    3.0.0-rc.7      Preview helm upgrade changes as a diff
 
+
+LOGS---
+
+gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ fluentd -c efk/my-config.conf
+gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ echo '{"Hello":  "World !!!"}' | fluent-cat  some-tag
+
