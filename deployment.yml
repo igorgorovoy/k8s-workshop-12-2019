@@ -20,11 +20,19 @@ spec:
             items:
               - key: important-file.txt
                 path: important-file.txt
+        - name: my-volume-with-secret-file
+          secret:
+            secretName: my-super-secret
+            items:
+              - key: secret-file.txt
+                path: secret-file.txt
       containers:
         - name: api
           volumeMounts:
             - name: my-volume-with-config-file
               mountPath: /dir-with-my-configs
+            - name: my-volume-with-secret-file
+              mountPath: /dir-with-my-secrets
           image: gmile/workshop-app:v14
           env:
             - name: DATABASE_URL
