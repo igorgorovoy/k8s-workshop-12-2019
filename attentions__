@@ -126,3 +126,8 @@ gorovoy@gorovoy-MacBookAir:~/k8s-workshop-12-2019$ history | grep kubectl
   999  kubectl apply -f ./deployment.yml
  1000  kubectl get pods
  1001  history | grep kubectl
+
+
+-- ширование файла
+openssl aes-256-cbc -a -salt -in my-file -out my-file.enc
+openssl aes-256-cbc -d -a -in my-file.enc -out my-file

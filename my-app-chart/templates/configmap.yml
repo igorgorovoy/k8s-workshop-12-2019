@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-super-config
+data:
+  my_config_key: my_config_value
+  important-file.txt:
+    Hello from file!!!!!
