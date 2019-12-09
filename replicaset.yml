@@ -1,0 +1,23 @@
+
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-app
+spec:
+  selector:
+    matchLabels:
+      my_app: hello-world
+  template:
+    metadata:
+      name: hello-world
+      labels:
+        my_app: hello-world
+    spec:
+      containers:
+        - name: api
+          image: gmile/workshop-app:v14
+          env:
+            - name: DATABASE_URL
+              value: postgres://postgres@10.60.1.18:5432/my-test-db
+
